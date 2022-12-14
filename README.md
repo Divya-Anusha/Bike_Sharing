@@ -1,60 +1,80 @@
-# Lending Club Case Study
-> A consumer finance company is specialised in lending various types of loans like personal loans, business loans, vacation, home loans, home renovation, credit cards, moving, small businesses, cars etc., Borrowers can easily access to low interest rate through a faster online interface like most other lending companies. Lending loans to risky applications is the largest source of financial loss to the funded investors. Credit loss is the most  amount of money lost by the lender when the borrower refuses to pay the loan amount to understand the driving factors behind the defaulters or charged off. The variables which are presented are the strong indicators of defaulters or charged off people   
-
+# Linear Regression Assignment
+## Bike Sharing
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
-* [IDES](#IDES)
+* [Acknowledgements](#acknowledgements)
+
+<!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+### Problem statement
+
+A bike-sharing system is a service in which bikes are made available for shared use to individuals on a short term basis for a price or free. Many bike share systems allow people to borrow a bike from a "dock" which is usually computer-controlled wherein the user enters the payment information, and the system unlocks it. This bike can then be returned to another dock belonging to the same system.
+
+
+A US bike-sharing provider BoomBikes has recently suffered considerable dips in their revenues due to the ongoing Corona pandemic. The company is finding it very difficult to sustain in the current market scenario. So, it has decided to come up with a mindful business plan to be able to accelerate its revenue as soon as the ongoing lockdown comes to an end, and the economy restores to a healthy state. 
+
+
+In such an attempt, BoomBikes aspires to understand the demand for shared bikes among the people after this ongoing quarantine situation ends across the nation due to Covid-19. They have planned this to prepare themselves to cater to the people's needs once the situation gets better all around and stand out from other service providers and make huge profits.
+
+
+They have contracted a consulting company to understand the factors on which the demand for these shared bikes depends. Specifically, they want to understand the factors affecting the demand for these shared bikes in the American market. The company wants to know:
+
+- Which variables are significant in predicting the demand for shared bikes.
+- How well those variables describe the bike demands
+Based on various meteorological surveys and people's styles, the service provider firm has gathered a large dataset on daily bike demands across the American market based on some factors. 
+
+
+### Business Goal:
+You are required to model the demand for shared bikes with the available independent variables. It will be used by the management to understand how exactly the demands vary with different features. They can accordingly manipulate the business strategy to meet the demand levels and meet the customer's expectations. Further, the model will be a good way for management to understand the demand dynamics of a new market. 
+
+
+### Data Preparation:
+
+You can observe in the dataset that some of the variables like 'weathersit' and 'season' have values as 1, 2, 3, 4 which have specific labels associated with them (as can be seen in the data dictionary). These numeric values associated with the labels may indicate that there is some order to them - which is actually not the case (Check the data dictionary and think why). So, it is advisable to convert such feature values into categorical string values before proceeding with model building. Please refer the data dictionary to get a better understanding of all the independent variables.
+ 
+You might notice the column 'yr' with two values 0 and 1 indicating the years 2018 and 2019 respectively. At the first instinct, you might think it is a good idea to drop this column as it only has two values so it might not be a value-add to the model. But in reality, since these bike-sharing systems are slowly gaining popularity, the demand for these bikes is increasing every year proving that the column 'yr' might be a good variable for prediction. So think twice before dropping it. 
+
+
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
 
 ## Conclusions
-Major predictors of deciding whether a loan applicant tend to defaulter or Charged off :
-- Around 5000 people who are defaulters in the loan status from data set
-- Maximum number of charged off loans is happend in the grade B category
-- Maximum number of charged off loans is happend in the sub grade B category
-- Debt_consolidation is having more Charged Off
-- Emp length is more than 10 years charged off is more
-- Home Ownership having RENT loan status is more defaulters
-- People take loan in CA Address State has more defaulters
-- Not Verified status has more defaulters
-- Defaulters are more if Interest Rate is between 10%-15%
-- Revol util is in between 70-80 we are having more charge off loan status from the above graph
-- If total number of accounts is in between 10-20 loan status is more in Fully paid and charged off from the above graph
-- Charged Off is more if the term plan is 36 months
-- More charged off and fully paid is happened in 0 to 10000 range of loan amount
-- Dti between 12-18 having more charged off when compared with other ranges
-- Emp having 10 yrs having more charged off for funded loan amount investment 12000+
-- More charged off is in verified status in between 14000 to 16000 funded amount investment
-- 17500 funded amount investment have more charged off in F grade
-- 18k - 20k loan amount have more charged off in F grade
-- More Charged off in 30k to 60k range in annual income
-- Annual income with 50k to 60k with purpose home improvement have more charged off
-- Interest rate 20 to 25 percentage  with annual income 60000+ have more charged off
-- Loan taken for house purpose has more charged off
-- Interest high with grade G has more defaulters
-- Mortgage home ownership with 60000 annual income have more charged off
-- Annual income with 90k-120k having high interest rate have more charged off
-- positive correlation at revol_util and int_rate 
-- positive correlation at loan amount approved ratio and year issued
+- Conclusion 1 Working day is having negative corrilation with saturday and sundays weekdays
+- Conclusion 2 hum has very high VIF and negative corrilation with cnt
+- Conclusion 3 As we can see the p-value of the features and Vif both low so we can conclude this is our final model
+- Conclusion 4 Actual and predected value of target variable seems to be pretty match, so we can conclude model is ok
+- Conclusion 5 Actual and predected value for test data is also seems to aligned properly and they seems to be match
+- Conclusion 6 r2_score 0.80 that is 80% coverage is quite good and our models seems to explain 80% of the data
+
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
 
 ## Technologies Used
-- pandas - version 1.4.2
-- matplotlib - version 3.5.1
-- seaborn - version 0.11.2
+- library - matplotlib
+- library - statsmodels
+- library - sklearn
+- library - seaborn
+- library - pandas
+- library - numpy
+- library - datetime
 
-## IDES
-- PyCharm
-- Jupyter
-- VS Code
+<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+
+## Acknowledgements
+Give credit here.
+- This project was based on Bike sharing.
+
 
 ## Contact
-Created by [@aswanth523] - feel free to contact me!
-
 Created by [@Divya-Anusha] - feel free to contact me!
+
+
+<!-- Optional -->
+<!-- ## License -->
+<!-- This project is open source and available under the [... License](). -->
+
+<!-- You don't have to include all sections - just the one's relevant to your project -->
